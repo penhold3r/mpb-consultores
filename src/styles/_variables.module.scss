@@ -1,0 +1,139 @@
+/***********************************
+*
+* COLORS
+*
+*/
+$primary-color: #323291;
+$primary-grey: lighten(desaturate($primary-color, 35%), 10%);
+
+$secondary-color: #9c6ff3;
+$secondary-grey: lighten(desaturate($secondary-color, 55%), 10%);
+
+$accent-color: #31d0d8;
+$accent-grey: lighten(desaturate($accent-color, 55%), 10%);
+
+$grey: desaturate($primary-color, 60%);
+$light: lighten(desaturate($primary-color, 75%), 50%);
+$dark: darken(desaturate($primary-color, 75%), 25%);
+
+$theme-colors: (
+	'primary': $primary-color,
+	'primary-grey': $primary-grey,
+	'secondary': $secondary-color,
+	'secondary-grey': $secondary-grey,
+	'accent': $accent-color,
+	'accent-grey': $accent-grey,
+	'grey': $grey,
+	'light': $light,
+	'dark': $dark,
+	'grey-100': lighten($grey, 40%),
+	'grey-200': lighten($grey, 30%),
+	'grey-300': lighten($grey, 20%),
+	'grey-400': lighten($grey, 10%),
+	'grey-500': $grey,
+	'grey-600': darken($grey, 10%),
+	'grey-700': darken($grey, 15%),
+	'grey-800': darken($grey, 20%),
+	'grey-900': darken($grey, 22%),
+);
+
+:export {
+	primary: $primary-color;
+	primaryGrey: $primary-grey;
+	secondary: $secondary-color;
+	secondaryGrey: $secondary-grey;
+	accent: $accent-color;
+	accentGrey: $accent-grey;
+	grey: $grey;
+	light: $light;
+	dark: $dark;
+	grey100: lighten($grey, 40%);
+	grey200: lighten($grey, 30%);
+	grey300: lighten($grey, 20%);
+	grey400: lighten($grey, 10%);
+	grey500: $grey;
+	grey600: darken($grey, 10%);
+	grey700: darken($grey, 20%);
+	grey800: darken($grey, 25%);
+	grey900: darken($grey, 30%);
+}
+
+/***********************************
+*
+* TYPOGRAPHY
+*
+*/
+
+$font-family-base: 'colaborate-regular', 'Trebuchet Ms', sans-serif;
+
+$regular: 'colaborate-regular', 'Trebuchet Ms', sans-serif;
+$thin: 'colaborate-thin', 'Trebuchet Ms', sans-serif;
+$bold: 'colaborate-bold', 'Trebuchet Ms', sans-serif;
+
+$enable-responsive-font-sizes: true;
+
+/**********************************/
+
+@import '~bootstrap/scss/bootstrap';
+
+/***********************************
+*
+* SCROLLBAR COLOR
+*
+*/
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+	// Webkit
+	&::-webkit-scrollbar {
+		width: $size;
+		height: $size;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: $foreground-color;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: $background-color;
+	}
+
+	// Firefox
+	scrollbar-color: $foreground-color $background-color;
+}
+
+/***********************************
+*
+* RESPONSIVE POSITION AND SIZES
+*
+*/
+
+$positions: static, relative, absolute, fixed, sticky;
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+		// position classes
+		@each $value in $positions {
+			.pos#{$infix}-#{$value} {
+				position: $value !important;
+			}
+		}
+
+		// size classes
+		@each $prop, $abbrev in (width: w, height: h) {
+			@each $size, $length in $sizes {
+				.#{$abbrev}#{$infix}-#{$size} {
+					#{$prop}: $length !important;
+				}
+			}
+		}
+	}
+}
+
+// .w-100 {
+// 	width: 100%;
+// }
+
+// .h-100 {
+// 	width: 100%;
+// }

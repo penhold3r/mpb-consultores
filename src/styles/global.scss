@@ -1,0 +1,48 @@
+@use "sass:map";
+@import 'variables.module';
+@import 'customcolors.module';
+
+html,
+body {
+	scroll-behavior: smooth;
+	@include scrollbars(10px, $secondary-color, $grey);
+}
+
+body {
+	margin: 0;
+	background: $light;
+	color: $dark;
+
+	&.dark {
+		background: map-get($theme-colors, 'grey-100');
+		color: $light;
+
+		main {
+			background: $dark;
+		}
+	}
+
+	main {
+		background: $light;
+	}
+
+	.modal-header .close {
+		outline: none;
+	}
+
+	.hero-text {
+		@include font-size(3rem);
+	}
+
+	.hero-sub {
+		@include font-size(1.5rem);
+	}
+
+	.about-title {
+		@include font-size(3rem);
+	}
+
+	.slide-title {
+		@include font-size(3.25rem);
+	}
+}

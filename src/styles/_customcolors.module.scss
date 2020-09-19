@@ -1,0 +1,24 @@
+@import 'variables.module';
+
+$foo: 'bar';
+
+:export {
+	primary: $primary-color;
+	primaryGrey: $primary-grey;
+	secondary: $secondary-color;
+	secondaryGrey: $secondary-grey;
+	accent: $accent-color;
+	accentGrey: $accent-grey;
+	grey: $grey;
+	light: $light;
+	dark: $dark;
+	grey100: lighten($grey, 40%);
+	grey200: lighten($grey, 30%);
+	grey300: lighten($grey, 20%);
+	grey400: lighten($grey, 10%);
+	grey500: $grey;
+	grey600: darken($grey, 10%);
+	grey700: darken($grey, 20%);
+	grey800: darken($grey, 25%);
+	grey900: darken($grey, 30%);
+}

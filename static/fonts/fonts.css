@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'colaborate-thin';
+    src: url('colaborate-thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'colaborate-regular';
+    src: url('colaborate-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'colaborate-bold';
+    src: url('colaborate-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
