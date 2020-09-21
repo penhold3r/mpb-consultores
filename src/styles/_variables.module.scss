@@ -12,9 +12,9 @@ $secondary-grey: lighten(desaturate($secondary-color, 55%), 10%);
 $accent-color: #31d0d8;
 $accent-grey: lighten(desaturate($accent-color, 55%), 10%);
 
-$grey: desaturate($primary-color, 60%);
-$light: lighten(desaturate($primary-color, 75%), 50%);
-$dark: darken(desaturate($primary-color, 75%), 25%);
+$grey: desaturate($primary-color, 40%);
+$light: lighten(desaturate($primary-color, 30%), 50%);
+$dark: darken(desaturate($primary-color, 30%), 25%);
 
 $theme-colors: (
 	'primary': $primary-color,
@@ -129,11 +129,3 @@ $positions: static, relative, absolute, fixed, sticky;
 		}
 	}
 }
-
-// .w-100 {
-// 	width: 100%;
-// }
-
-// .h-100 {
-// 	width: 100%;
-// }

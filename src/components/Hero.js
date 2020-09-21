@@ -2,11 +2,11 @@ import React from 'react'
 import { Jumbotron, Container, Button } from 'react-bootstrap'
 import { isMobileOnly } from 'react-device-detect'
 
-import hex2rgba from '../utils/hex2rgba'
+//import hex2rgba from '../utils/hex2rgba'
 
 import Link from './Link'
 
-import colors from '../styles/_variables.module.scss'
+//import colors from '../styles/_customcolors.module.scss'
 import bgImage from '../images/mpb-hero.jpg'
 import bgShape from '../images/mpb-hero-bg.gif'
 
@@ -17,7 +17,6 @@ const styles = {
 		backgroundAttachment: 'fixed',
 		backgroundSize: 'cover',
 		backgroundBlendMode: 'multiply',
-		//backgroundColor: colors.primary,
 		backgroundImage: `url(${bgImage}), url(${bgShape})`,
 		position: 'relative',
 	},
@@ -41,7 +40,7 @@ const styles = {
 
 const Hero = () => {
 	return (
-		<section className='hero' style={styles.hero} id='inicio'>
+		<section className='hero bg-primary' style={styles.hero} id='inicio'>
 			<Jumbotron
 				fluid
 				style={styles.jumbo}
@@ -64,6 +63,7 @@ const Hero = () => {
 						<Button
 							href='/#nosotros'
 							variant='accent'
+							size='lg'
 							className='mt-5 text-white mr-auto'
 							size='lg'>
 							<span className='text-uppercase' style={styles.cta}>

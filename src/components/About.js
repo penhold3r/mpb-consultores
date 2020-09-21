@@ -5,15 +5,6 @@ import { isMobile } from 'react-device-detect'
 import aboutImg from '../images/mpb-contract.jpg'
 
 const About = () => {
-	const styles = {
-		imgs: {
-			objectFit: 'cover',
-			height: '200px',
-			width: '100%',
-			filter: 'sepia(0.6)',
-			mixBlendMode: 'multiply',
-		},
-	}
 	return (
 		<section className='about section pt-5' id='nosotros'>
 			<Container className='py-5'>
@@ -24,7 +15,7 @@ const About = () => {
 								<h2 className='about-title text-primary display-4 mt-4 mt-md-0'>
 									¿Quienes Somos?
 								</h2>
-								<p className='lead py-2 text-secondary-grey'>
+								<p className='lead py-2 text-secondary'>
 									Somos un grupo de profesionales con experiencia desarrollada en la
 									atención a emprendedores y pequeñas y medianas empresas.
 								</p>
@@ -36,7 +27,7 @@ const About = () => {
 									a disposición soluciones eficientes.
 								</p>
 
-								<p className='text-primary-grey'>
+								<p className='text-primary-grey pb-3 mb-0 border-bottom border-accent'>
 									Brindamos una solución rápida e integral y efectiva a las necesidades de
 									nuestros clientes, acompañándolos en su crecimiento. Ponemos nuestros
 									recursos técnicos y humanos a su servicio, contribuyendo con nuestro

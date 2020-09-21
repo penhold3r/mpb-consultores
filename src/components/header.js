@@ -62,7 +62,7 @@ const Header = () => {
 
 			window.onscroll = () => handleScroll()
 		}
-	}, [colapsed])
+	}, [])
 
 	return (
 		<header className='main-header'>

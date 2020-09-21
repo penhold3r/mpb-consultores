@@ -7,6 +7,15 @@ import hex2rgba from '../utils/hex2rgba'
 
 import ContactModal from './ContactModal'
 
+import colors from '../styles/_customcolors.module.scss'
+import bg from '../images/mpb-hero-bg.gif'
+
+const styles = {
+	section: {
+		background: `${colors.primaryGrey} url(${bg}) no-repeat fixed center / cover`,
+	},
+}
+
 const Contact = () => {
 	const [validated, setValidated] = useState(false)
 	const [modal, setModal] = useState(false)
@@ -29,7 +38,7 @@ const Contact = () => {
 		setValidated(true)
 
 		if (form.checkValidity()) {
-			const url = 'https://estudiojuridicodipietro.com/contact-form/index.php'
+			const url = 'https://mpbconsultores.com/contact-form/index.php'
 
 			setModal(true)
 			setModalTexts({
@@ -43,7 +52,11 @@ const Contact = () => {
 				url,
 				data: qs.stringify({
 					...data,
-					dest: 'penhold3r@gmail.com,consultas@estudiojuridicodipietro.com',
+					dest: 'penhold3r@gmail.com',
+					primaryColor: colors.primary,
+					secondaryColor: colors.secondary,
+					textColor: colors.dark,
+					host: 'mpbconsultores.com',
 				}),
 				headers: {
 					'content-type': 'application/x-www-form-urlencoded;charset=utf-8',
@@ -63,7 +76,7 @@ const Contact = () => {
 						text: `${data.name}, algo parece haber salido mal, intenta de nuevo más tarde.`,
 					})
 					setModalStatus('error')
-					console.err(err)
+					console.error(err)
 				})
 
 			setValidated(false)
@@ -72,7 +85,10 @@ const Contact = () => {
 	}
 
 	return (
-		<section className={`section bg-dark bg-foo py-5`} id='contacto'>
+		<section
+			className={`section bg-primary-grey bg-foo py-5`}
+			id='contacto'
+			style={styles.section}>
 			<ContactModal
 				show={modal}
 				onHide={() => setModal(false)}
@@ -83,9 +99,9 @@ const Contact = () => {
 			<Container className='py-5'>
 				<Card
 					className='border-0 pt-3 px-3 p-md-3'
-					style={{ background: hex2rgba('#FFFFFF', 0.6) }}>
+					style={{ background: hex2rgba(colors.light, 0.6) }}>
 					<Card.Body className='mb-md-4 p-0'>
-						<h2 className='h1 p-0 p-md-3 text-grey'>Contacto</h2>
+						<h2 className='h1 p-0 p-md-3 text-white'>Contacto</h2>
 						<Row>
 							<Col sm={12} md={6}>
 								<ListGroup className='bg-transparent mb-4 mb-md-0' variant='flush'>
@@ -95,8 +111,8 @@ const Contact = () => {
 										href='https://goo.gl/maps/eQuryAaUje7HAbBz7'
 										target='_blank'
 										rel='noopener noreferrer'>
-										<i className='h3 text-primary mb-0 mr-3 ri-home-2-line'></i>
-										<span className={`text-primary`}>
+										<i className='h3 text-white mb-0 mr-3 ri-home-2-line'></i>
+										<span className={`text-white`}>
 											Colón 430, 1er piso Of. 19, Mendoza.
 										</span>
 									</ListGroup.Item>
@@ -104,8 +120,8 @@ const Contact = () => {
 										className='d-flex align-items-center bg-transparent px-0 px-md-3'
 										action
 										href='tel:+5492613064177'>
-										<i className='h3 text-primary mb-0 mr-3 ri-phone-line'></i>
-										<span className={`text-primary`}>261 306 4177</span>
+										<i className='h3 text-white mb-0 mr-3 ri-phone-line'></i>
+										<span className={`text-white`}>261 306 4177</span>
 									</ListGroup.Item>
 									<ListGroup.Item
 										className='d-flex align-items-center bg-transparent px-0 px-md-3'
@@ -113,8 +129,8 @@ const Contact = () => {
 										href={`https://wa.me/5492613064177?text=${encodeURI(
 											'Hola, necesito hacer una consulta.'
 										)}`}>
-										<i className='h3 text-primary mb-0 mr-3 ri-whatsapp-line'></i>
-										<span className={`text-primary`}>Comunicate por Whatsapp</span>
+										<i className='h3 text-white mb-0 mr-3 ri-whatsapp-line'></i>
+										<span className={`text-white`}>Comunicate por Whatsapp</span>
 									</ListGroup.Item>
 								</ListGroup>
 							</Col>
@@ -214,12 +230,17 @@ const Contact = () => {
 									</Form.Group>
 
 									<Form.Group controlId='formBasicCheckbox'>
-										<Form.Check type='checkbox' label='No soy un robot' required />
+										<Form.Check
+											type='checkbox'
+											label='No soy un robot'
+											className='text-grey'
+											required
+										/>
 									</Form.Group>
 
 									<Button
 										className='d-flex w-100 w-md-auto w-lg-auto w-xl-auto justify-content-center align-items-center'
-										variant={'outline-primary'}
+										variant={'outline-accent'}
 										type='submit'>
 										<span className='mr-2'>Enviar</span>
 										<i className='ri-mail-send-line'></i>

@@ -24,14 +24,14 @@ const Footer = () => {
 	)
 
 	return (
-		<footer className={`bg-primary py-3`}>
+		<footer className={`bg-dark py-3`}>
 			<Container className='my-3'>
 				<div className='d-flex py-2 justify-content-center'>
 					{siteMetadata.socialMedia.map((icon, index) => (
 						<Button
 							key={index}
 							className='rounded-circle mx-2'
-							variant='outline-secondary'
+							variant='outline-accent'
 							href={icon.url}
 							target='_blank'
 							rel='noopener noreferrer'
@@ -41,24 +41,21 @@ const Footer = () => {
 					))}
 				</div>
 				<p className={`text-center text-light my-3`}>
-					<small className='d-flex flex-sm-column flex-md-row justify-content-center'>
-						<span className='mb-sm-2 mb-md-none'>
+					<small className='d-flex flex-column flex-md-row justify-content-center'>
+						<span className='mb-2 mb-md-none'>
 							{siteMetadata.title} &copy; {new Date().getFullYear()}
 						</span>
-						<span className='d-sm-none d-md-inline-block'>&emsp;|&emsp;</span>
-						<span className='mb-sm-2 mb-md-none'>
-							Desarrollo:{' '}
+						<span className='d-none d-md-inline-block'>&emsp;|&emsp;</span>
+						<span className='mb-2 mb-md-none'>
+							Diseño y Desarrollo:{' '}
 							<Link to='https://github.com/penhold3r' className='text-secondary'>
 								penHolder Designerd
 							</Link>
-						</span>
-						<span className='d-sm-none d-md-inline-block'>&emsp;|&emsp;</span>
-						<span className='mb-sm-2 mb-md-none'>
-							Diseño:{' '}
+							&ensp;&amp;&ensp;
 							<Link
 								to='https://www.instagram.com/cm_brand_agency/'
 								className='text-secondary'>
-								CM Brand Agency
+								BeWine
 							</Link>
 						</span>
 					</small>
