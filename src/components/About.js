@@ -10,8 +10,8 @@ const About = () => {
 			<Container className='py-5'>
 				<Card className={`shadow-sm border-0 p-0 p-md-3 bg-white`}>
 					<Card.Body>
-						<Row>
-							<Col sm={12} md={8} className='pr-md-5'>
+						<Row className='foo'>
+							<Col sm={12} md={8} className='pr-md-5 order-2 order-md-1'>
 								<h2 className='about-title text-primary display-4 mt-4 mt-md-0'>
 									¿Quienes Somos?
 								</h2>
@@ -38,7 +38,7 @@ const About = () => {
 							<Col
 								sm={12}
 								md={4}
-								className='d-flex'
+								className='d-flex order-1 order-md-2'
 								style={{ height: isMobile ? '175px' : 'auto' }}>
 								<Image src={aboutImg} fluid rounded style={{ objectFit: 'cover' }} />
 							</Col>

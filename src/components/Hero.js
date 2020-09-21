@@ -13,7 +13,7 @@ import bgShape from '../images/mpb-hero-bg.gif'
 const styles = {
 	hero: {
 		backgroundRepeat: `no-repeat`,
-		backgroundPosition: `center`,
+		backgroundPosition: `center center, right center`,
 		backgroundAttachment: 'fixed',
 		backgroundSize: 'cover',
 		backgroundBlendMode: 'multiply',
@@ -55,6 +55,7 @@ const Hero = () => {
 						<Button
 							href='/#contacto'
 							variant='accent'
+							size='lg'
 							className='mt-5 mx-auto d-inline-flex align-items-center'>
 							<i className='ri-chat-3-line mr-2'></i>
 							<span>Asesorate</span>
@@ -64,8 +65,7 @@ const Hero = () => {
 							href='/#nosotros'
 							variant='accent'
 							size='lg'
-							className='mt-5 text-white mr-auto'
-							size='lg'>
+							className='mt-5 text-white mr-auto'>
 							<span className='text-uppercase' style={styles.cta}>
 								Conocenos
 							</span>
