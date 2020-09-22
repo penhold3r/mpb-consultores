@@ -5,13 +5,14 @@
 html,
 body {
 	scroll-behavior: smooth;
+
 	@include scrollbars(10px, $secondary-color, $grey);
 }
 
 body {
-	margin: 0;
 	background: $light;
 	color: $dark;
+	margin: 0;
 
 	&.dark {
 		background: map-get($theme-colors, 'grey-100');
@@ -27,14 +28,14 @@ body {
 	}
 
 	.nav-link {
+		border-bottom: 1px solid transparent;
 		font-size: 0.85rem;
 		letter-spacing: 0.075rem;
 		transition: 0.3s;
-		border-bottom: 1px solid transparent;
 
 		&:hover {
-			color: $accent-color !important;
 			border-color: $accent-color;
+			color: $accent-color !important;
 		}
 	}
 
@@ -70,7 +71,10 @@ body {
 		@include font-size(3rem);
 	}
 
-	.slide-title {
-		@include font-size(3.25rem);
+	.services-title {
+		@include font-size(2.25rem);
+
+		font-family: $thin;
+		letter-spacing: 0.075rem;
 	}
 }

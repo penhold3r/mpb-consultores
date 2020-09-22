@@ -8,7 +8,7 @@ const About = () => {
 	return (
 		<section className='about section pt-5' id='nosotros'>
 			<Container className='py-5'>
-				<Card className={`shadow-sm border-0 p-0 p-md-3 bg-white`}>
+				<Card className={`shadow-sm border-0 p-0 p-md-3 bg-white`} data-aos='fade-up'>
 					<Card.Body>
 						<Row className='foo'>
 							<Col sm={12} md={8} className='pr-md-5 order-2 order-md-1'>

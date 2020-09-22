@@ -20,9 +20,13 @@ const styles = {
 const Services = () => {
 	return (
 		<section className='services bg-light py-5' id='servicios'>
-			<div className='bg-primary px-2 py-4 mb-5' style={styles.section}>
-				<h2 className='h1 text-white text-center mt-2 py-2 text-uppercase'>Áreas de trabajo</h2>
-				<div className='mb-4'>
+			<div className='bg-primary px-2 py-5 mb-5' style={styles.section}>
+				<h2
+					className='services-title h1 text-white text-center mt-2 py-2 text-uppercase'
+					data-aos='fade-up'>
+					Áreas de trabajo
+				</h2>
+				<div className='mb-4' data-aos='fade-up'>
 					<p className='lead text-center text-white m-0'>
 						Asesoramiento impositivo, contable o laboral.
 					</p>
@@ -43,12 +47,16 @@ const Services = () => {
 				</div>
 			</div>
 			<Container className='pb-4 my-4'>
-				<h2 className='h1 text-primary text-center mt-2 py-2 text-uppercase'>Servicios</h2>
+				<h2
+					className='services-title h1 text-primary text-center mt-2 py-2 text-uppercase'
+					data-aos='fade-up'>
+					Servicios
+				</h2>
 
 				<Row className='pb-4'>
 					{servicesList.map((service, index) => (
 						<Col sm={12} md={6} className='my-3' key={index}>
-							<Card className={`bg-light h-100`}>
+							<Card className={`bg-light h-100`} data-aos='fade-up'>
 								<Card.Header className='bg-primary-grey p-3 border-bottom border-accent'>
 									<Card.Title className='m-0'>
 										<span className='text-white text-center'>{service.title}</span>
