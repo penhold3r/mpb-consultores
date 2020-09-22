@@ -63,18 +63,18 @@ const Hero = () => {
 					) : (
 						<Button
 							href='/#nosotros'
-							variant='accent'
+							variant='outline-accent'
 							size='lg'
-							className='mt-5 text-white mr-auto'>
+							className='mt-5 mr-auto'>
 							<span className='text-uppercase' style={styles.cta}>
 								Conocenos
 							</span>
 						</Button>
 					)}
 				</Container>
-				<Link to={`/#nosotros`} className={`scroll text-white h2`} style={styles.scroll}>
+				<Link to={`/#nosotros`} className={`scroll text-accent h2`} style={styles.scroll}>
 					<i
-						className='ri-arrow-down-line d-flex justify-content-center'
+						className='ri-arrow-down-s-line d-flex justify-content-center'
 						style={styles.scroll}></i>
 				</Link>
 			</Jumbotron>

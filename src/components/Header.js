@@ -72,7 +72,7 @@ const Header = () => {
 				fixed='top'
 				expand='md'
 				style={styles.nav}>
-				<Container className='pos-relative'>
+				<Container className='pos-relative py-2'>
 					<Navbar.Brand href='#'>
 						<img
 							alt={siteMetadata.title}
@@ -94,21 +94,21 @@ const Header = () => {
 						<Nav className='ml-auto mr-2 mr-md-3 mt-3 mt-md-0 text-right'>
 							<Link
 								to='/#inicio'
-								className='nav-link text-white text-decoration-none text-uppercase py-3 p-md-2'
+								className='nav-link text-white text-decoration-none text-uppercase py-3 py-md-2 mx-md-2'
 								onClick={() => toggleBtn.current.click()}>
 								Inicio
 							</Link>
 							<div className='border-bottom d-md-none border-grey' />
 							<Link
 								to='/#nosotros'
-								className='nav-link text-white text-decoration-none text-uppercase py-3 p-md-2'
+								className='nav-link text-white text-decoration-none text-uppercase py-3 py-md-2 mx-md-2'
 								onClick={() => toggleBtn.current.click()}>
 								Nosotros
 							</Link>
 							<div className='border-bottom d-md-none border-grey' />
 							<Link
 								to='/#servicios'
-								className='nav-link text-white text-decoration-none text-uppercase py-3 p-md-2'
+								className='nav-link text-white text-decoration-none text-uppercase py-3 py-md-2 mx-md-2'
 								onClick={() => toggleBtn.current.click()}>
 								Servicios
 							</Link>
@@ -118,7 +118,7 @@ const Header = () => {
 									<div className='border-bottom d-md-none border-grey' />
 									<Link
 										to='/#contacto'
-										className='nav-link text-white text-decoration-none text-uppercase py-3 p-md-2'
+										className='nav-link text-white text-decoration-none text-uppercase py-3 py-md-2 mx-md-2'
 										onClick={() => toggleBtn.current.click()}>
 										Contacto
 									</Link>

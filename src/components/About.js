@@ -12,8 +12,8 @@ const About = () => {
 					<Card.Body>
 						<Row className='foo'>
 							<Col sm={12} md={8} className='pr-md-5 order-2 order-md-1'>
-								<h2 className='about-title text-primary display-4 mt-4 mt-md-0'>
-									¿Quienes Somos?
+								<h2 className='about-title font-weight-bold text-primary display-4 mt-4 mt-md-0'>
+									¿<span className='font-weight-normal'>Quienes</span> Somos?
 								</h2>
 								<p className='lead py-2 text-secondary'>
 									Somos un grupo de profesionales con experiencia desarrollada en la

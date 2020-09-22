@@ -26,6 +26,18 @@ body {
 		background: $light;
 	}
 
+	.nav-link {
+		font-size: 0.85rem;
+		letter-spacing: 0.075rem;
+		transition: 0.3s;
+		border-bottom: 1px solid transparent;
+
+		&:hover {
+			color: $accent-color !important;
+			border-color: $accent-color;
+		}
+	}
+
 	.modal-header .close {
 		outline: none;
 	}

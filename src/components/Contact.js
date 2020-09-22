@@ -99,7 +99,7 @@ const Contact = () => {
 			<Container className='py-5'>
 				<Card
 					className='border-0 pt-3 px-3 p-md-3'
-					style={{ background: hex2rgba(colors.light, 0.6) }}>
+					style={{ background: hex2rgba(colors.light, 0.4) }}>
 					<Card.Body className='mb-md-4 p-0'>
 						<h2 className='h1 p-0 p-md-3 text-white'>Contacto</h2>
 						<Row>
@@ -108,12 +108,12 @@ const Contact = () => {
 									<ListGroup.Item
 										className='d-flex align-items-center bg-transparent px-0 px-md-3'
 										action
-										href='https://goo.gl/maps/eQuryAaUje7HAbBz7'
+										href='https://goo.gl/maps/HJ7gkQApvdugrEc56'
 										target='_blank'
 										rel='noopener noreferrer'>
 										<i className='h3 text-white mb-0 mr-3 ri-home-2-line'></i>
 										<span className={`text-white`}>
-											Colón 430, 1er piso Of. 19, Mendoza.
+											Bandera de los Andes 4166 Villa Nueva (5521) Mendoza.
 										</span>
 									</ListGroup.Item>
 									<ListGroup.Item

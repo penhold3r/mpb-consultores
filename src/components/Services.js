@@ -3,37 +3,71 @@ import { Container, Row, Col, Card } from 'react-bootstrap'
 
 import servicesList from '../data/servicesList'
 
+import colors from '../styles/_customcolors.module.scss'
+
+import bgImg from '../images/mpb-graph.jpg'
+
+const styles = {
+	section: {
+		background: `${colors.primary} url(${bgImg}) no-repeat fixed center / cover`,
+		backgroundBlendMode: 'multiply',
+	},
+	separator: {
+		width: '4rem',
+	},
+}
+
 const Services = () => {
 	return (
 		<section className='services bg-light py-5' id='servicios'>
-			<Container className='pb-4 my-4'>
-				<h2 className='h1 text-primary text-center mt-2 py-2 text-uppercase'>
-					Áreas de trabajo
-				</h2>
+			<div className='bg-primary px-2 py-4 mb-5' style={styles.section}>
+				<h2 className='h1 text-white text-center mt-2 py-2 text-uppercase'>Áreas de trabajo</h2>
 				<div className='mb-4'>
-					<p className='lead text-center text-primary m-0'>
+					<p className='lead text-center text-white m-0'>
 						Asesoramiento impositivo, contable o laboral.
 					</p>
-					<p className='lead text-center text-primary m-0'>Liquidación de sueldos.</p>
-					<p className='lead text-center text-primary m-0'>
+					<div
+						className='my-3 mx-auto border-bottom border-accent'
+						style={styles.separator}></div>
+					<p className='lead text-center text-white m-0'>Liquidación de sueldos.</p>
+					<div
+						className='my-3 mx-auto border-bottom border-accent'
+						style={styles.separator}></div>
+					<p className='lead text-center text-white m-0'>
 						Atención personalizada y home office.
 					</p>
-					<p className='lead text-center text-primary m-0'>
+					<div
+						className='my-3 mx-auto border-bottom border-accent'
+						style={styles.separator}></div>
+					<p className='lead text-center text-white m-0'>
 						Sabes que impuestos debes que pagar.
 					</p>
-					<p className='lead text-center text-primary m-0'>Querés organizar tu empresa.</p>
-					<p className='lead text-center text-primary m-0'>
+					<div
+						className='my-3 mx-auto border-bottom border-accent'
+						style={styles.separator}></div>
+					<p className='lead text-center text-white m-0'>Querés organizar tu empresa.</p>
+					<div
+						className='my-3 mx-auto border-bottom border-accent'
+						style={styles.separator}></div>
+					<p className='lead text-center text-white m-0'>
 						Conoces los beneficios de crear una sociedad.
 					</p>
-					<p className='lead text-center text-primary m-0'>
+					<div
+						className='my-3 mx-auto border-bottom border-accent'
+						style={styles.separator}></div>
+					<p className='lead text-center text-white m-0'>
 						Sabes cómo informatizar tu empresa.
 					</p>
 				</div>
+			</div>
+			<Container className='pb-4 my-4'>
+				<h2 className='h1 text-primary text-center mt-2 py-2 text-uppercase'>Servicios</h2>
+
 				<Row className='pb-4'>
 					{servicesList.map((service, index) => (
 						<Col sm={12} md={6} className='my-3' key={index}>
 							<Card className={`bg-light h-100`}>
-								<Card.Header className='bg-secondary p-3 border-bottom border-accent'>
+								<Card.Header className='bg-accent p-3 border-bottom border-secondary'>
 									<Card.Title className='m-0'>
 										<span className='text-white text-center'>{service.title}</span>
 									</Card.Title>
