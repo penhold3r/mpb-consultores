@@ -38,6 +38,22 @@ body {
 		}
 	}
 
+	.contact-link {
+		transition: 0.3s;
+
+		i {
+			transition: 0.3s;
+		}
+
+		&:hover {
+			opacity: 0.7;
+
+			i {
+				color: $accent-color !important;
+			}
+		}
+	}
+
 	.modal-header .close {
 		outline: none;
 	}

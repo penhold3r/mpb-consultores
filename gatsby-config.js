@@ -9,7 +9,7 @@ module.exports = {
 			{
 				name: 'Whatsapp',
 				icon: 'ri-whatsapp-line',
-				url: `https://wa.me/5492610000000?text=${encodeURI(
+				url: `https://wa.me/5492616277088?text=${encodeURI(
 					'Hola, necesito hacer una consulta.'
 				)}`,
 			},

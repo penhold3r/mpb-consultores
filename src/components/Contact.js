@@ -38,7 +38,8 @@ const Contact = () => {
 		setValidated(true)
 
 		if (form.checkValidity()) {
-			const url = 'https://mpbconsultores.com/contact-form/index.php'
+			const url =
+				'https://cors-anywhere.herokuapp.com/https://mpbconsultores.com/contact-form/index.php'
 
 			setModal(true)
 			setModalTexts({
@@ -52,7 +53,7 @@ const Contact = () => {
 				url,
 				data: qs.stringify({
 					...data,
-					dest: 'penhold3r@gmail.com',
+					dest: 'info@mpbconsultores.com',
 					primaryColor: colors.primary,
 					secondaryColor: colors.secondary,
 					textColor: colors.dark,
@@ -106,7 +107,7 @@ const Contact = () => {
 							<Col sm={12} md={6}>
 								<ListGroup className='bg-transparent mb-4 mb-md-0' variant='flush'>
 									<ListGroup.Item
-										className='d-flex align-items-center bg-transparent px-0 px-md-3'
+										className='contact-link d-flex align-items-center bg-transparent px-0 px-md-3'
 										action
 										href='https://goo.gl/maps/HJ7gkQApvdugrEc56'
 										target='_blank'
@@ -117,16 +118,23 @@ const Contact = () => {
 										</span>
 									</ListGroup.Item>
 									<ListGroup.Item
-										className='d-flex align-items-center bg-transparent px-0 px-md-3'
+										className='contact-link d-flex align-items-center bg-transparent px-0 px-md-3'
 										action
-										href='tel:+5492613064177'>
-										<i className='h3 text-white mb-0 mr-3 ri-phone-line'></i>
-										<span className={`text-white`}>261 306 4177</span>
+										href='mailto:info@mpbconsultores.com'>
+										<i className='h3 text-white mb-0 mr-3 ri-at-line'></i>
+										<span className={`text-white`}>info@mpbconsultores.com</span>
 									</ListGroup.Item>
 									<ListGroup.Item
-										className='d-flex align-items-center bg-transparent px-0 px-md-3'
+										className='contact-link d-flex align-items-center bg-transparent px-0 px-md-3'
 										action
-										href={`https://wa.me/5492613064177?text=${encodeURI(
+										href='tel:+5492616277088'>
+										<i className='h3 text-white mb-0 mr-3 ri-phone-line'></i>
+										<span className={`text-white`}>261 627 7088</span>
+									</ListGroup.Item>
+									<ListGroup.Item
+										className='contact-link d-flex align-items-center bg-transparent px-0 px-md-3'
+										action
+										href={`https://wa.me/5492616277088?text=${encodeURI(
 											'Hola, necesito hacer una consulta.'
 										)}`}>
 										<i className='h3 text-white mb-0 mr-3 ri-whatsapp-line'></i>

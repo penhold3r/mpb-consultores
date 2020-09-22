@@ -33,30 +33,12 @@ const Services = () => {
 					<div
 						className='my-3 mx-auto border-bottom border-accent'
 						style={styles.separator}></div>
+					<p className='lead text-center text-white m-0'>Sociedades.</p>
+					<div
+						className='my-3 mx-auto border-bottom border-accent'
+						style={styles.separator}></div>
 					<p className='lead text-center text-white m-0'>
 						Atención personalizada y home office.
-					</p>
-					<div
-						className='my-3 mx-auto border-bottom border-accent'
-						style={styles.separator}></div>
-					<p className='lead text-center text-white m-0'>
-						Sabes que impuestos debes que pagar.
-					</p>
-					<div
-						className='my-3 mx-auto border-bottom border-accent'
-						style={styles.separator}></div>
-					<p className='lead text-center text-white m-0'>Querés organizar tu empresa.</p>
-					<div
-						className='my-3 mx-auto border-bottom border-accent'
-						style={styles.separator}></div>
-					<p className='lead text-center text-white m-0'>
-						Conoces los beneficios de crear una sociedad.
-					</p>
-					<div
-						className='my-3 mx-auto border-bottom border-accent'
-						style={styles.separator}></div>
-					<p className='lead text-center text-white m-0'>
-						Sabes cómo informatizar tu empresa.
 					</p>
 				</div>
 			</div>
