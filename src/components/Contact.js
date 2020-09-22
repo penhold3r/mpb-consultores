@@ -99,7 +99,7 @@ const Contact = () => {
 			<Container className='py-5'>
 				<Card
 					className='border-0 pt-3 px-3 p-md-3'
-					style={{ background: hex2rgba(colors.light, 0.4) }}>
+					style={{ background: hex2rgba(colors.light, 0.3) }}>
 					<Card.Body className='mb-md-4 p-0'>
 						<h2 className='h1 p-0 p-md-3 text-white'>Contacto</h2>
 						<Row>

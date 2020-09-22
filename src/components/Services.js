@@ -67,7 +67,7 @@ const Services = () => {
 					{servicesList.map((service, index) => (
 						<Col sm={12} md={6} className='my-3' key={index}>
 							<Card className={`bg-light h-100`}>
-								<Card.Header className='bg-accent p-3 border-bottom border-secondary'>
+								<Card.Header className='bg-primary-grey p-3 border-bottom border-accent'>
 									<Card.Title className='m-0'>
 										<span className='text-white text-center'>{service.title}</span>
 									</Card.Title>

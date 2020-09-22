@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col, Card, Image } from 'react-bootstrap'
 import { isMobile } from 'react-device-detect'
 
-import aboutImg from '../images/mpb-contract.jpg'
+import aboutImg from '../images/mpb-about.jpg'
 
 const About = () => {
 	return (
